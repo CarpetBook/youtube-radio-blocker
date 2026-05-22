@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Radio Blocker",
+  "version": "1.0",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "hako@no-youtube-radio",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "permissions": [
+    "*://*.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
